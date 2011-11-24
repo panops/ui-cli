@@ -11,7 +11,7 @@ module PanOps
         # The Minor Version Number
         MINOR = '0'
         # The Patch Version Number
-        PATCH = '1alpha'
+        PATCH = '1alpha1'
 
         # Converts the information stored in the Version module into a standards compliant
         # version identification string
