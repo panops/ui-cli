@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    panops-ui-cli (0.0.1alpha)
+    panops-ui-cli (0.0.1alpha1)
       panops-core (~> 0.0.1alpha1)
 
 GEM
