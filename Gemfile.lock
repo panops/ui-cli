@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     panops-ui-cli (0.0.1alpha)
-      panops-core (~> 0.0.1alpha)
+      panops-core (~> 0.0.1alpha1)
 
 GEM
   remote: http://rubygems.org/
@@ -11,7 +11,7 @@ GEM
     metaclass (0.0.1)
     mocha (0.10.0)
       metaclass (~> 0.0.1)
-    panops-core (0.0.1alpha)
+    panops-core (0.0.1alpha1)
     rake (0.9.2.2)
     rdiscount (1.6.8)
     rspec (2.7.0)
