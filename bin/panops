@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+require 'panops/user_interfaces/cli'
+
+command_arguments = ARGV
+
+PanOps::UserInterfaces::CLI.run! command_arguments
