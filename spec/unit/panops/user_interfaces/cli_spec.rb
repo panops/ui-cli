@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'unit/unit_helper'
 
 describe PanOps::UserInterfaces::CLI do
   

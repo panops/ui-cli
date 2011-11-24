@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'unit/unit_helper'
 
-describe PanOps::UserInterfaces::CLI do
+describe PanOps::UserInterfaces::CLI::Version do
 
   it 'is defined' do
     subject.should_not be_nil
