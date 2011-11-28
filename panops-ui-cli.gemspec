@@ -29,4 +29,5 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'rdiscount', '~> 1.6.8'
 
   gem.add_dependency 'panops-core', '~> 0.0.1alpha1'
+  gem.add_dependency 'state_machine', '~> 1.1.0'
 end

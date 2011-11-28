@@ -1,3 +1,5 @@
+require 'state_machine'
+
 module PanOps
   module UserInterfaces
     module CLI
