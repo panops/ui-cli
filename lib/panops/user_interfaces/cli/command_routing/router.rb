@@ -1,7 +1,7 @@
 module PanOps
   module UserInterfaces
     module CLI
-      module Routing
+      module CommandRouting
 
         # Given a routing information base and a request, route the request to the
         # appropriate method with appropriate parameters

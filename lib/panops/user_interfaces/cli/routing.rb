@@ -4,11 +4,11 @@ module PanOps
       
       # Classes and modules related to mapping command-line requests to internal
       # CLI methods and actions
-      module Routing        
+      module CommandRouting
       end
       
     end
   end
 end
 
-require 'panops/user_interfaces/cli/routing/router'
+require 'panops/user_interfaces/cli/command_routing/router'
