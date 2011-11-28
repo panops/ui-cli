@@ -19,30 +19,71 @@ describe PanOps::UserInterfaces::CLI::TestUtilities::CommandRunner::Process do
         @state_state_machine.should_not be_nil
       end
       
-      it "is initially in state 'created'" do
+      it "is initially in state created" do
         subject.state_name.should eql(:created)
       end
       
-      context "for state 'created'" do
+      context 'for state' do
         
-        it "defines that state" do
-          @state_state_machine_states.should include(:created)
+        context 'created' do
+          
+          it "defines that state" do
+            @state_state_machine_states.should include(:created)
+          end
+          
+        end
+        
+        context 'running' do
+        
+          it "defines that state" do
+            @state_state_machine_states.should include(:running)
+          end
+          
+        end
+        
+        context 'terminated' do
+        
+          it "defines that state" do
+            @state_state_machine_states.should include(:terminated)
+          end
+          
         end
         
       end
       
-      context "for state 'running'" do
-      
-        it "defines that state" do
-          @state_state_machine_states.should include(:running)
+      context 'on event' do
+        
+        before :each do
+          @state_state_machine_events = @state_state_machine.events
+          @state_state_machines_event_names = @state_state_machine_events.map{|e| e.name}
         end
         
-      end
-      
-      context "for state 'terminated'" do
-      
-        it "defines that state" do
-          @state_state_machine_states.should include(:terminated)
+        context 'started' do
+          
+          it 'defines that event' do
+            @state_state_machines_event_names.should include(:started)
+          end
+          
+          context 'when the state state machine is in the created state' do
+            
+            before :each do
+              subject.state = 'created'
+            end
+            
+            context 'when the event is fired' do
+            
+              before :each do
+                subject.started
+              end
+              
+              it 'transitions the state machine to the running state' do
+                subject.state_name.should eql(:running)
+              end
+            
+            end
+            
+          end
+          
         end
         
       end

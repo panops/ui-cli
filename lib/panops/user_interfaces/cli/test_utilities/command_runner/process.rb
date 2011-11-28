@@ -16,9 +16,11 @@ module PanOps
             
             state_machine :state, :initial => :created do
               
-              state :running
-              
               state :terminated
+              
+              event :started do
+                transition :created => :running
+              end
               
             end
             
