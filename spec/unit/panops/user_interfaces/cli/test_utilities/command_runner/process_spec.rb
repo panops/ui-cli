@@ -19,14 +19,14 @@ describe PanOps::UserInterfaces::CLI::TestUtilities::CommandRunner::Process do
         @state_state_machine.should_not be_nil
       end
       
+      it "is initially in state 'created'" do
+        subject.state_name.should eql(:created)
+      end
+      
       context "for state 'created'" do
         
         it "defines that state" do
           @state_state_machine_states.should include(:created)
-        end
-        
-        it "is initially in state 'created'" do
-          subject.state_name.should eql(:created)
         end
         
       end
