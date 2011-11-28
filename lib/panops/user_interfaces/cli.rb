@@ -12,3 +12,4 @@ module PanOps
 end
 
 require 'panops/user_interfaces/cli/version'
+require 'panops/user_interfaces/cli/routing'
