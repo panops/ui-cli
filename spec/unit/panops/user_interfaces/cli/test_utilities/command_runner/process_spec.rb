@@ -41,7 +41,7 @@ describe PanOps::UserInterfaces::CLI::TestUtilities::CommandRunner::Process do
       
       context "for state 'terminated'" do
       
-        it "defines a state 'terminated'" do
+        it "defines that state" do
           @state_state_machine_states.should include(:terminated)
         end
         
