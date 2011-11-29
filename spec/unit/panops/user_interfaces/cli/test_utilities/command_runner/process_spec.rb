@@ -73,13 +73,41 @@ describe PanOps::UserInterfaces::CLI::TestUtilities::CommandRunner::Process do
             context 'when the event is fired' do
             
               before :each do
-                subject.started
+                subject.started!
               end
               
               it 'transitions the state machine to the running state' do
                 subject.state_name.should eql(:running)
               end
             
+            end
+            
+          end
+          
+        end
+        
+        context 'stopped' do
+          
+          it 'defines that event' do
+            @state_state_machines_event_names.should include(:stopped)
+          end
+          
+          context 'when the state state machine is in the running state' do
+            
+            before :each do
+              subject.state = 'running'
+            end
+            
+            context 'when the event is fired' do
+              
+              before :each do
+                subject.stopped!
+              end
+              
+              it 'transitions the state machine to the terminated state' do
+                subject.state_name.should eql(:terminated)
+              end
+              
             end
             
           end
