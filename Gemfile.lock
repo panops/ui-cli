@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/justinlynn/state_machine.git
+  revision: 8a19e696caa83d8ad943753068486e5de1bee618
+  branch: yard_integration
+  specs:
+    state_machine (1.1.0)
+
 PATH
   remote: .
   specs:
@@ -23,7 +30,6 @@ GEM
     rspec-expectations (2.7.0)
       diff-lcs (~> 1.1.2)
     rspec-mocks (2.7.0)
-    state_machine (1.1.0)
     yard (0.7.3)
 
 PLATFORMS
@@ -35,4 +41,5 @@ DEPENDENCIES
   rake (~> 0.9.2)
   rdiscount (~> 1.6.8)
   rspec (~> 2.7.0)
+  state_machine!
   yard (~> 0.7)

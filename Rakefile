@@ -34,6 +34,7 @@ task :doc => [:'doc:yard']
 
 namespace :doc do
   require 'yard'
+  require 'state_machine/yard'
   YARD::Rake::YardocTask.new do |task|
     task.files = ['lib/**/*.rb', '-', 'LICENSE']
     task.options = [
