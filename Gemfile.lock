@@ -23,8 +23,12 @@ GEM
     rspec-expectations (2.7.0)
       diff-lcs (~> 1.1.2)
     rspec-mocks (2.7.0)
+    ruby-graphviz (1.0.0)
     state_machine (1.1.0)
     yard (0.7.3)
+    yard-state_machine (0.0.1)
+      ruby-graphviz (~> 1.0.0)
+      yard (~> 0.7.3)
 
 PLATFORMS
   ruby
@@ -36,3 +40,4 @@ DEPENDENCIES
   rdiscount (~> 1.6.8)
   rspec (~> 2.7.0)
   yard (~> 0.7)
+  yard-state_machine (~> 0.0.1)

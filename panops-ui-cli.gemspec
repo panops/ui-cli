@@ -27,6 +27,7 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'rspec', '~> 2.7.0'
   gem.add_development_dependency 'yard', '~> 0.7'
   gem.add_development_dependency 'rdiscount', '~> 1.6.8'
+  gem.add_development_dependency 'yard-state_machine', '~> 0.0.1'
 
   gem.add_dependency 'panops-core', '~> 0.0.1alpha1'
   gem.add_dependency 'state_machine', '~> 1.1.0'
