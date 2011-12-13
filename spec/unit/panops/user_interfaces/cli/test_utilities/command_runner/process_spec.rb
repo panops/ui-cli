@@ -2,11 +2,29 @@ require 'unit/unit_helper'
 
 describe PanOps::UserInterfaces::CLI::TestUtilities::CommandRunner::Process do
   
+  subject do
+    described_class
+  end
+  
   it 'is defined' do
-    subject.class.should be_eql(PanOps::UserInterfaces::CLI::TestUtilities::CommandRunner::Process)
+    subject.should be_eql(PanOps::UserInterfaces::CLI::TestUtilities::CommandRunner::Process)
   end
   
   context 'an instance' do
+    
+    subject do
+      @process_executable_path = '/bin/echo'
+      @process_arguments = []
+      described_class.new(@process_executable_path, @process_arguments)
+    end
+    
+    it "knows about the process's executable's path" do
+      subject.executable_path.should eql(@process_executable_path)
+    end
+    
+    it "has a set of arguments for the process executable" do
+      subject.arguments.should eql(@process_arguments)
+    end
     
     context 'a state machine called state' do
       

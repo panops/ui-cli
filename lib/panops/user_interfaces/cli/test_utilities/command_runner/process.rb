@@ -15,11 +15,24 @@ module PanOps
           # state.
           class Process
             
+            # The executable file's path on the underlying filesystem.
+            attr_accessor :executable_path
+            
+            # A set of arguments which will be passed to the called executable.
+            attr_accessor :arguments
+            
             # The ID of the running process. This process ID is assigned by the underlying operating system.
             attr_accessor :process_id
             
-            # Create a new Process instance.
-            def initialize
+            # Create a new Process instance to manage a given executable, it's input and output, and state.
+            # @param [String] executable_path The path to the executable to be managed by this process object
+            # @param [Array[String]] arguments The command-line arguments to pass to the executable.
+            # @return [Process] An instance of class Process
+            # @example Create a new Process instance
+            #   Process.new('/bin/dd', ['if=/dev/zero','of=/dev/null'])
+            def initialize executable_path, arguments = []
+              @executable_path = executable_path
+              @arguments = arguments
               initialize_state_machines
             end
             
