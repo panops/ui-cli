@@ -15,6 +15,9 @@ module PanOps
           # state.
           class Process
             
+            # The ID of the running process. This process ID is assigned by the underlying operating system.
+            attr_accessor :process_id
+            
             # Create a new Process instance.
             def initialize
               initialize_state_machines
