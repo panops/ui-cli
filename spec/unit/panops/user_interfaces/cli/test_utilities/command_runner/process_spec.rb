@@ -31,7 +31,7 @@ describe PanOps::UserInterfaces::CLI::TestUtilities::CommandRunner::Process do
             @state_state_machine_states.should include(:created)
           end
           
-          it "does not have a process id" do
+          it "has a non-existent process id" do
             subject.process_id.should be_nil
           end
           
